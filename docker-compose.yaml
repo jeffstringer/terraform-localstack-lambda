@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  localstack:
+    image: localstack/localstack:latest
+    container_name: localstack
+    environment:
+     - SERVICES=iam,lambda,cloudwatch
+     - DEFAULT_REGION=us-west-2
+    ports:
+     - "4574:4574"
+     - "4582:4582"
+     - "4593:4593"
