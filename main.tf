@@ -7,9 +7,9 @@ provider "aws" {
   skip_requesting_account_id  = true
   skip_metadata_api_check     = true
   endpoints {
-    lambda     = "http://localhost:4574"
-    cloudwatch = "http://localhost:4582"
-    iam        = "http://localhost:4593"
+    lambda     = "${var.localhost}:4574"
+    cloudwatch = "${var.localhost}:4582"
+    iam        = "${var.localhost}:4593"
   }
 }
 
