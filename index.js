@@ -1,4 +1,3 @@
-exports.handler = (event) => {
-  console.log(event);
-  return event;
+exports.handler = async (event) => {
+  return event.Details.Parameters.CustomerCallbackNumber;
 }

@@ -1,0 +1,18 @@
+{ "Details":
+  { "ContactData":
+    { "Attributes": {},
+      "Channel": "VOICE",
+      "ContactId": "abcd-1234",
+      "CustomerEndpoint": [{}],
+      "InitialContactId": "abcd-1234",
+      "InitiationMethod": "INBOUND",
+      "InstanceARN":
+      "arn:aws:connect:us-west-2:10000:instance/1234-xyz",
+      "MediaStreams": [{}],
+      "PreviousContactId": "abcd-1234",
+      "Queue": null,
+      "SystemEndpoint": [{}] },
+      "Parameters": { "CustomerCallbackNumber": "+12065551212" }
+    },
+  "Name": "ContactFlowEvent"
+}

@@ -3,3 +3,5 @@ lambda_function.zip
 .terraform
 terraform.tfstate
 terraform.tfstate.backup
+/localstack
+outputfile.txt

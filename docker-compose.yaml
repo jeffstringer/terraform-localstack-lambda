@@ -2,12 +2,18 @@ version: '3.7'
 
 services:
   localstack:
-    image: localstack/localstack:latest
-    container_name: localstack
+    image: localstack/localstack
     environment:
-     - SERVICES=iam,lambda,cloudwatch
-     - DEFAULT_REGION=us-west-2
+      - SERVICES=iam,lambda,cloudwatch
+      - DEFAULT_REGION=us-west-2
+      - LAMBDA_EXECUTOR=${LAMBDA_EXECUTOR- docker-reuse}
+      - DOCKER_HOST=unix:///var/run/docker.sock
     ports:
-     - "4574:4574"
-     - "4582:4582"
-     - "4593:4593"
+      - "4574:4574"
+      - "4582:4582"
+      - "4593:4593"
+      - "9090:9090"
+    volumes:
+      - ".:/usr/src/app/project"
+      - "./localstack:/tmp/localstack"
+      - "/var/run/docker.sock:/var/run/docker.sock"
